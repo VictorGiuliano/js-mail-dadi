@@ -10,9 +10,20 @@ const max = 7;
 
 for(let i = 0; i<1; i++){
    let resultPlayer = Math.floor(First * max);
-   console.log(resultPlayer); 
    let resultComputer = Math.floor(Second * max);
-   console.log(resultComputer); 
 
+   console.log(resultPlayer); 
+   console.log(resultComputer);
+
+   if(resultPlayer > resultComputer){
+      console.log('Vince giocatore 1'); 
+   }else if(resultPlayer === resultComputer){
+    console.log('Questo è un pareggio');
+   }else{
+    console.log('Vince il computer')
+   }
    
+   
+
+
 }

@@ -6,24 +6,31 @@ const tableElement = document.getElementById('table');
 const First = Math.random();
 const Second = Math.random();
 
-const max = 7;
+
+const max = 6;
 
 for(let i = 0; i<1; i++){
-   let resultPlayer = Math.floor(First * max);
-   let resultComputer = Math.floor(Second * max);
+   let resultPlayer = Math.floor(First * max) + 1;
+   let resultComputer = Math.floor(Second * max)+ 1;
 
-   console.log(resultPlayer); 
-   console.log(resultComputer);
+   const messagePlayer = `Il giocatore 1 fa: ${resultPlayer}`;
+   const messageComputer = `Il computer fa: ${resultComputer}`;
+
+   const finalResult = messagePlayer + " " + messageComputer;
+   tableElement.innerText = finalResult;
+   
+   console.log(messagePlayer); 
+   console.log(messageComputer);
 
    if(resultPlayer > resultComputer){
       console.log('Vince giocatore 1'); 
+      tableElement.innerText = finalResult + " Vince il giocatore 1";
    }else if(resultPlayer === resultComputer){
     console.log('Questo è un pareggio');
+    tableElement.innerText = finalResult + " Questo è un pareggio";
    }else{
     console.log('Vince il computer')
+    tableElement.innerText = finalResult + " Vince il computer";
    }
-   
-   
-
 
 }

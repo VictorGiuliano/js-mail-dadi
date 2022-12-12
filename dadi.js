@@ -3,6 +3,7 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 Stampiamo in pagina i due tiri e il risultato */
 
 const tableElement = document.getElementById('table');
+const paragraph = document.getElementById('result');
 const First = Math.random();
 const Second = Math.random();
 
@@ -24,13 +25,12 @@ for(let i = 0; i<1; i++){
 
    if(resultPlayer > resultComputer){
       console.log('Vince giocatore 1'); 
-      tableElement.innerText = finalResult + " Vince il giocatore 1";
+      paragraph.innerText = " Vince il giocatore 1";
    }else if(resultPlayer === resultComputer){
     console.log('Questo è un pareggio');
-    tableElement.innerText = finalResult + " Questo è un pareggio";
+    paragraph.innerText = " Questo è un pareggio";
    }else{
     console.log('Vince il computer')
-    tableElement.innerText = finalResult + " Vince il computer";
+    paragraph.innerText = " Vince il computer";
    }
-
 }

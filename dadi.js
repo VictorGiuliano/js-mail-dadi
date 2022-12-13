@@ -10,7 +10,7 @@ const Second = Math.random();
 
 const max = 6;
 
-for(let i = 0; i<1; i++){
+
    let resultPlayer = Math.floor(First * max) + 1;
    let resultComputer = Math.floor(Second * max)+ 1;
 
@@ -33,4 +33,4 @@ for(let i = 0; i<1; i++){
     console.log('Vince il computer')
     paragraph.innerText = " Vince il computer";
    }
-}
+
